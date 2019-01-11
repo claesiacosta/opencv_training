@@ -5,11 +5,11 @@ from sklearn.svm import SVR
 from sklearn.svm import SVC
 
 
-diva_n = cv2.imread("divadepressao.jpg")
-filhos_n = cv2.imread("filhosdagravida.jpg")
-tested1 = cv2.imread("teste1.jpg")
-tested2 = cv2.imread("teste2.jpg")
-testefg = cv2.imread("testefg.jpg")
+diva_n = cv2.imread("img/divadepressao.jpg")
+filhos_n = cv2.imread("img/filhosdagravida.jpg")
+tested1 = cv2.imread("img/teste1.jpg")
+tested2 = cv2.imread("img/teste2.jpg")
+testefg = cv2.imread("img/testefg.jpg")
 
 
 #print(diva_n.shape)
@@ -37,7 +37,7 @@ clf_lin = SVC(kernel='linear')
 
 clf_lin.fit(X,Y)
 
-predicao = clf_lin.predict(testef3.reshape(1,-1))
+predicao = clf_lin.predict(teste2.reshape(1,-1))
 score = clf_lin.score(X,Y)
 
 print(predicao)
@@ -49,5 +49,5 @@ if predicao == 2:
 	resultado = filhos_n
 
 cv2.imshow("Resultado", resultado)
-cv2.imshow("Teste", testefg)
+cv2.imshow("Teste", tested2)
 cv2.waitKey(0)
