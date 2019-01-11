@@ -1,1 +1,1 @@
-# opencv_training
+# OpenCV
